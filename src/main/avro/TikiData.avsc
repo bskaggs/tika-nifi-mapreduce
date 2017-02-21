@@ -1,0 +1,23 @@
+{
+	"namespace": "com.github.bskaggs.mapreduce.tikanifi.avro",
+ 	"type": "record",
+ 	"name": "TikaFile",
+ 	"fields" : [ 
+		{
+			"name" : "attributes",
+			"type" : {
+				"type": "map", 
+				"values": "string"
+			}
+		}, {
+			"name" : "resources",
+			"type" : {
+				"type": "array",
+				"items": {
+					"type": "map", 
+					"values": {"type": "array", "items": "string"}
+				}
+			}
+		}
+	]
+}
